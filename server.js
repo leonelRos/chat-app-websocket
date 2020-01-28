@@ -1,5 +1,6 @@
-//require express
+//require modules
 const express = require('express');
+const path = require('path');
 //create express app
 const app = express();
 
@@ -7,8 +8,13 @@ const app = express();
 app.get('/', function (req, res) {
     res.send('<h2>Hello Express</h2>');
 });
-//configure the app (app.set)
 
+app.get('/home', function(req, res){
+    res.render('home');
+});
+//configure the app (app.set)
+app.set('view engine', 'ejs')
+app.set('views', path.join(__dirname, 'views'));
 //mount midleware (app.use)
 
 //mount routes

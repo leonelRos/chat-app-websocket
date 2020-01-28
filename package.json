@@ -1,7 +1,7 @@
 {
   "name": "proj-express",
   "version": "1.0.0",
-  "description": "",
+  "description": "group chat built with socket.io, node, react",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

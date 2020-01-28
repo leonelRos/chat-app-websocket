@@ -8,5 +8,20 @@
 </head>
 <body>
     <h1>Welcome to Leo's websocket chat</h1>
+    <section>
+        <section><ul id="messages"></ul>
+        <label>Name: </label><input id="user-name">
+        <label>Message: </label><textarea id="msg"></textarea><br><br>
+        <input type="button" id="button" value=" Send Message ">
+        <script src="/socket.io/socket.io.js"></script>
+    </section>
+    <footer>CopyRight@2020</footer>
 </body>
 </html>
+                        <!-- <script>
+                        var socket = io.connect('http://localhost');
+                        socket.on('news', function (data) {
+                            console.log(data);
+                            socket.emit('my other event', { my: 'data' });
+                        });
+                        </script> -->

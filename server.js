@@ -35,7 +35,12 @@ const server = app.listen(port, function(){
 const io = require('socket.io')(server)
 
 io.on('connection', (socket) => {
-    console.log("a new client has been connected")
+    console.log("A new client has been connected")
+
+    socket.username = "anonimous"
+    socket.on('new_message', (data) => {
+        io.sockets.emit("new_message", {message:data.message,username:socket.username})
+    })
 })
 
 

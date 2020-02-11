@@ -10,11 +10,14 @@ require('./config/database');
 //create express app
 const app = express();
 
-
-
 const port = process.env.PORT || 3000;
+
 //define a route directly on the app
-app.use(express.static(__dirname));
+app.set("view engine", "ejs")
+app.get('/', (req,res) => {
+    res.render('index')
+})
+// app.use(express.static(__dirname));
 
 
 //configure the app (app.set)
